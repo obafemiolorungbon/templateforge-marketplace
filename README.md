@@ -7,13 +7,13 @@ Public template catalog for TemplateForge. The repository is designed to be serv
 After publishing this repo as `YOUR_GITHUB_USER/templateforge-marketplace`, the manifest URL is:
 
 ```txt
-https://cdn.jsdelivr.net/gh/YOUR_GITHUB_USER/templateforge-marketplace@main/manifest.json
+https://cdn.jsdelivr.net/gh/obafemiolorungbon/templateforge-marketplace@main/manifest.json
 ```
 
 Set this in TemplateForge:
 
 ```env
-TEMPLATEFORGE_MARKETPLACE_MANIFEST_URL="https://cdn.jsdelivr.net/gh/YOUR_GITHUB_USER/templateforge-marketplace@main/manifest.json"
+TEMPLATEFORGE_MARKETPLACE_MANIFEST_URL="https://cdn.jsdelivr.net/gh/obafemiolorungbon/templateforge-marketplace@main/manifest.json"
 ```
 
 ## Structure
