@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "templates": [
+    {
+      "id": "welcome-account",
+      "version": "1.0.0",
+      "name": "Welcome account",
+      "description": "A clean onboarding email for a newly created workspace or account.",
+      "category": "onboarding",
+      "tags": ["onboarding", "account", "welcome"],
+      "author": "TemplateForge",
+      "license": "MIT",
+      "url": "templates/welcome-account@1.0.0.json"
+    }
+  ]
+}
+
