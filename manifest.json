@@ -2,16 +2,35 @@
   "schemaVersion": "1.0",
   "templates": [
     {
+      "id": "payment-failed",
+      "slug": "payment-failed",
+      "name": "Payment Failed",
+      "version": "1.0.0",
+      "category": "billing",
+      "useCase": "Notify a customer that a payment failed and prompt them to update payment details.",
+      "description": "A billing recovery email with one clear payment update action.",
+      "tags": [
+        "transactional",
+        "billing",
+        "payment-failed"
+      ],
+      "path": "templates/payment-failed@1.0.0.json",
+      "preview": "previews/payment-failed@1.0.0.png"
+    },
+    {
       "id": "welcome-account",
       "version": "1.0.0",
       "name": "Welcome account",
       "description": "A clean onboarding email for a newly created workspace or account.",
       "category": "onboarding",
-      "tags": ["onboarding", "account", "welcome"],
+      "tags": [
+        "onboarding",
+        "account",
+        "welcome"
+      ],
       "author": "TemplateForge",
       "license": "MIT",
       "url": "templates/welcome-account@1.0.0.json"
     }
   ]
 }
-
