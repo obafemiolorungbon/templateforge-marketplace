@@ -1,12 +1,13 @@
 {
+  "schemaVersion": "1.0",
   "id": "abandoned-checkout",
   "slug": "abandoned-checkout",
   "name": "Abandoned Checkout",
   "version": "1.0.0",
   "category": "commerce",
+  "subject": "Still considering {{product_name}}?",
   "useCase": "Recover a checkout with restrained urgency and a premium product reminder.",
   "description": "A conversion-oriented checkout recovery email that stays simple and brand-safe.",
-  "subject": "Still considering {{product_name}}?",
   "tags": [
     "transactional",
     "commerce",
@@ -33,7 +34,8 @@
       "type": "string",
       "description": "Current cart total.",
       "required": true,
-      "example": "$212.00"
+      "example": "$212.00",
+      "format": "currency"
     },
     {
       "name": "item_count",
@@ -47,7 +49,8 @@
       "type": "string",
       "description": "Cart reservation window.",
       "required": true,
-      "example": "tomorrow"
+      "example": "tomorrow",
+      "format": "date"
     },
     {
       "name": "shipping_label",
@@ -61,7 +64,8 @@
       "type": "string",
       "description": "Absolute URL to checkout.",
       "required": true,
-      "example": "https://shop.example.com/checkout/recover"
+      "example": "https://shop.example.com/checkout/recover",
+      "format": "url"
     }
   ],
   "sampleVariables": {
@@ -73,18 +77,10 @@
     "shipping_label": "Free standard shipping",
     "checkout_url": "https://shop.example.com/checkout/recover"
   },
-  "qualityScore": {
-    "visual_quality": 9,
-    "copy_clarity": 9,
-    "mobile_readiness": 9,
-    "marketplace_usefulness": 9,
-    "implementation_safety": 10,
-    "originality": 9
-  },
-  "text": "Hi {{first_name}},\n\nwe saved your checkout for {{product_name}}. Return when you are ready and your selected items will still be there.\n\nCart total: {{cart_total}}\nItems: {{item_count}}\nSaved until: {{saved_until}}\nShipping: {{shipping_label}}\n\nReturn to checkout: {{checkout_url}}\n\nPrices and availability can change if inventory changes before checkout is completed.",
   "mjml": "<mjml>\n  <mj-head>\n    <mj-title>Abandoned Checkout</mj-title>\n    <mj-preview>A conversion-oriented checkout recovery email that stays simple and brand-safe.</mj-preview>\n    <mj-attributes>\n      <mj-all font-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif\" />\n      <mj-text color=\"#1c1917\" font-size=\"16px\" line-height=\"24px\" />\n      <mj-section padding=\"0\" />\n      <mj-button border-radius=\"999px\" font-size=\"15px\" font-weight=\"800\" inner-padding=\"15px 24px\" />\n    </mj-attributes>\n  </mj-head>\n  <mj-body background-color=\"#fff7ed\" width=\"600px\">\n    <mj-section padding=\"28px 22px 14px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#6b5d52\" font-size=\"12px\" font-weight=\"800\" letter-spacing=\"1.8px\" text-transform=\"uppercase\">{{product_name}}</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#22120b\" border-radius=\"22px 22px 0 0\" padding=\"34px 34px 28px\">\n      <mj-column>\n        <mj-text color=\"#fb923c\" font-size=\"11px\" font-weight=\"900\" letter-spacing=\"2px\" text-transform=\"uppercase\" padding=\"0 0 14px\">Saved checkout</mj-text>\n        <mj-text color=\"#fff7ed\" font-size=\"30px\" font-weight=\"850\" line-height=\"36px\" padding=\"0 0 12px\">Your cart is still waiting</mj-text>\n        <mj-text color=\"#fff7ed\" font-size=\"15px\" line-height=\"24px\" padding=\"0\">Hi {{first_name}}, we saved your checkout for {{product_name}}. Return when you are ready and your selected items will still be there.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#ffffff\" border-radius=\"0 0 22px 22px\" padding=\"0 30px 30px\">\n      <mj-column>\n        <mj-spacer height=\"26px\" />\n        <mj-text background-color=\"#ffedd5\" color=\"#1c1917\" font-size=\"13px\" font-weight=\"800\" line-height=\"20px\" padding=\"18px 20px 4px\">Cart total</mj-text>\n        <mj-text background-color=\"#ffedd5\" color=\"#1c1917\" font-size=\"28px\" font-weight=\"900\" line-height=\"34px\" padding=\"0 20px 18px\">{{cart_total}}</mj-text>\n        <mj-table padding=\"22px 0 4px\">\n          <tr><td style=\"padding:12px 0;border-bottom:1px solid #fed7aa;color:#6b5d52;font-size:13px;\">Items</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #fed7aa;color:#1c1917;font-size:13px;font-weight:700;\">{{item_count}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #fed7aa;color:#6b5d52;font-size:13px;\">Saved until</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #fed7aa;color:#1c1917;font-size:13px;font-weight:700;\">{{saved_until}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #fed7aa;color:#6b5d52;font-size:13px;\">Shipping</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #fed7aa;color:#1c1917;font-size:13px;font-weight:700;\">{{shipping_label}}</td></tr>\n        </mj-table>\n        <mj-button href=\"{{checkout_url}}\" background-color=\"#fb923c\" color=\"#1c1007\" padding=\"26px 0 8px\">Return to checkout</mj-button>\n        <mj-text align=\"center\" color=\"#6b5d52\" font-size=\"13px\" line-height=\"20px\" padding=\"18px 10px 0\">Prices and availability can change if inventory changes before checkout is completed.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section padding=\"22px 20px 40px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#6b5d52\" font-size=\"12px\" line-height=\"18px\">TemplateForge marketplace template. Update branding and URLs before production use.</mj-text>\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>",
+  "text": "Hi {{first_name}},\n\nwe saved your checkout for {{product_name}}. Return when you are ready and your selected items will still be there.\n\nCart total: {{cart_total}}\nItems: {{item_count}}\nSaved until: {{saved_until}}\nShipping: {{shipping_label}}\n\nReturn to checkout: {{checkout_url}}\n\nPrices and availability can change if inventory changes before checkout is completed.",
+  "preview": "previews/abandoned-checkout@1.0.0.png",
   "author": "TemplateForge",
   "license": "MIT",
-  "warnings": [],
-  "preview": "previews/abandoned-checkout@1.0.0.png"
+  "warnings": []
 }

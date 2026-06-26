@@ -1,12 +1,13 @@
 {
+  "schemaVersion": "1.0",
   "id": "trial-started",
   "slug": "trial-started",
   "name": "Trial Started",
   "version": "1.0.0",
   "category": "onboarding",
+  "subject": "Your {{plan_name}} trial is live",
   "useCase": "Confirm trial activation and move the customer into the first successful product action.",
   "description": "A clean trial activation email with a polished product-dashboard call to action.",
-  "subject": "Your {{plan_name}} trial is live",
   "tags": [
     "transactional",
     "onboarding",
@@ -61,7 +62,8 @@
       "type": "string",
       "description": "Absolute URL to the dashboard.",
       "required": true,
-      "example": "https://app.example.com/dashboard"
+      "example": "https://app.example.com/dashboard",
+      "format": "url"
     }
   ],
   "sampleVariables": {
@@ -73,18 +75,10 @@
     "first_step": "Import your brand kit",
     "dashboard_url": "https://app.example.com/dashboard"
   },
-  "qualityScore": {
-    "visual_quality": 9,
-    "copy_clarity": 9,
-    "mobile_readiness": 9,
-    "marketplace_usefulness": 9,
-    "implementation_safety": 10,
-    "originality": 9
-  },
-  "text": "Hi {{first_name}},\n\nyour {{plan_name}} trial for {{product_name}} is ready. We set up the workspace so you can move straight into the first project.\n\nTrial window: {{trial_days}} days\nPlan: {{plan_name}}\nWorkspace: {{workspace_name}}\nBest first step: {{first_step}}\n\nOpen workspace: {{dashboard_url}}\n\nYou can change plans or cancel from billing settings before the trial ends.",
   "mjml": "<mjml>\n  <mj-head>\n    <mj-title>Trial Started</mj-title>\n    <mj-preview>A clean trial activation email with a polished product-dashboard call to action.</mj-preview>\n    <mj-attributes>\n      <mj-all font-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif\" />\n      <mj-text color=\"#111827\" font-size=\"16px\" line-height=\"24px\" />\n      <mj-section padding=\"0\" />\n      <mj-button border-radius=\"999px\" font-size=\"15px\" font-weight=\"800\" inner-padding=\"15px 24px\" />\n    </mj-attributes>\n  </mj-head>\n  <mj-body background-color=\"#f6f8ff\" width=\"600px\">\n    <mj-section padding=\"28px 22px 14px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"12px\" font-weight=\"800\" letter-spacing=\"1.8px\" text-transform=\"uppercase\">{{product_name}}</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#0b1220\" border-radius=\"22px 22px 0 0\" padding=\"34px 34px 28px\">\n      <mj-column>\n        <mj-text color=\"#4285f4\" font-size=\"11px\" font-weight=\"900\" letter-spacing=\"2px\" text-transform=\"uppercase\" padding=\"0 0 14px\">Trial active</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"30px\" font-weight=\"850\" line-height=\"36px\" padding=\"0 0 12px\">{{trial_days}} days to build your first win</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"15px\" line-height=\"24px\" padding=\"0\">Hi {{first_name}}, your {{plan_name}} trial for {{product_name}} is ready. We set up the workspace so you can move straight into the first project.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#ffffff\" border-radius=\"0 0 22px 22px\" padding=\"0 30px 30px\">\n      <mj-column>\n        <mj-spacer height=\"26px\" />\n        <mj-text background-color=\"#eaf2ff\" color=\"#111827\" font-size=\"13px\" font-weight=\"800\" line-height=\"20px\" padding=\"18px 20px 4px\">Trial window</mj-text>\n        <mj-text background-color=\"#eaf2ff\" color=\"#111827\" font-size=\"28px\" font-weight=\"900\" line-height=\"34px\" padding=\"0 20px 18px\">{{trial_days}} days</mj-text>\n        <mj-table padding=\"22px 0 4px\">\n          <tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Plan</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{plan_name}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Workspace</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{workspace_name}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Best first step</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{first_step}}</td></tr>\n        </mj-table>\n        <mj-button href=\"{{dashboard_url}}\" background-color=\"#4285f4\" color=\"#ffffff\" padding=\"26px 0 8px\">Open workspace</mj-button>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"13px\" line-height=\"20px\" padding=\"18px 10px 0\">You can change plans or cancel from billing settings before the trial ends.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section padding=\"22px 20px 40px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"12px\" line-height=\"18px\">TemplateForge marketplace template. Update branding and URLs before production use.</mj-text>\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>",
+  "text": "Hi {{first_name}},\n\nyour {{plan_name}} trial for {{product_name}} is ready. We set up the workspace so you can move straight into the first project.\n\nTrial window: {{trial_days}} days\nPlan: {{plan_name}}\nWorkspace: {{workspace_name}}\nBest first step: {{first_step}}\n\nOpen workspace: {{dashboard_url}}\n\nYou can change plans or cancel from billing settings before the trial ends.",
+  "preview": "previews/trial-started@1.0.0.png",
   "author": "TemplateForge",
   "license": "MIT",
-  "warnings": [],
-  "preview": "previews/trial-started@1.0.0.png"
+  "warnings": []
 }

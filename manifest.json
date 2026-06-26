@@ -3,538 +3,487 @@
   "templates": [
     {
       "id": "email-verification",
-      "slug": "email-verification",
       "name": "Email Verification",
       "version": "1.0.0",
       "category": "authentication",
       "description": "A simple but elevated verification email for account creation and email changes.",
+      "useCase": "Verify a new user email address with a polished account activation flow.",
       "tags": [
         "transactional",
         "authentication",
         "email-verification",
         "account"
       ],
-      "path": "templates/email-verification@1.0.0.json",
       "url": "templates/email-verification@1.0.0.json",
-      "useCase": "Verify a new user email address with a polished account activation flow.",
+      "preview": "previews/email-verification@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/email-verification@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "magic-login-link",
-      "slug": "magic-login-link",
       "name": "Magic Login Link",
       "version": "1.0.0",
       "category": "authentication",
       "description": "A sleek magic-link email with expiry and request metadata.",
+      "useCase": "Send a passwordless login link with strong security context.",
       "tags": [
         "transactional",
         "authentication",
         "magic-link",
         "security"
       ],
-      "path": "templates/magic-login-link@1.0.0.json",
       "url": "templates/magic-login-link@1.0.0.json",
-      "useCase": "Send a passwordless login link with strong security context.",
+      "preview": "previews/magic-login-link@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/magic-login-link@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "new-device-login",
-      "slug": "new-device-login",
       "name": "New Device Login",
       "version": "1.0.0",
       "category": "authentication",
       "description": "A security notification with crisp metadata and a fast account-review action.",
+      "useCase": "Alert users when their account is accessed from a new device.",
       "tags": [
         "transactional",
         "authentication",
         "security",
         "new-device"
       ],
-      "path": "templates/new-device-login@1.0.0.json",
       "url": "templates/new-device-login@1.0.0.json",
-      "useCase": "Alert users when their account is accessed from a new device.",
+      "preview": "previews/new-device-login@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/new-device-login@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "password-reset-request",
-      "slug": "password-reset-request",
       "name": "Password Reset Request",
       "version": "1.0.0",
       "category": "authentication",
       "description": "A premium password reset email with a direct action and security context.",
+      "useCase": "Help users reset a password with clear account safety messaging.",
       "tags": [
         "transactional",
         "authentication",
         "password-reset",
         "security"
       ],
-      "path": "templates/password-reset-request@1.0.0.json",
       "url": "templates/password-reset-request@1.0.0.json",
-      "useCase": "Help users reset a password with clear account safety messaging.",
+      "preview": "previews/password-reset-request@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/password-reset-request@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "two-factor-code",
-      "slug": "two-factor-code",
       "name": "Two-factor Code",
       "version": "1.0.0",
       "category": "authentication",
       "description": "A focused verification email with a large code treatment and minimal distractions.",
+      "useCase": "Send a short-lived 2FA or OTP code in a clear, high-contrast format.",
       "tags": [
         "transactional",
         "authentication",
         "2fa",
         "otp"
       ],
-      "path": "templates/two-factor-code@1.0.0.json",
       "url": "templates/two-factor-code@1.0.0.json",
-      "useCase": "Send a short-lived 2FA or OTP code in a clear, high-contrast format.",
+      "preview": "previews/two-factor-code@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/two-factor-code@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "invoice-ready",
-      "slug": "invoice-ready",
       "name": "Invoice Ready",
       "version": "1.0.0",
       "category": "billing",
       "description": "A sharp invoice email designed for SaaS, services, and subscription billing.",
+      "useCase": "Send customers a premium invoice notice with direct access to billing details.",
       "tags": [
         "transactional",
         "billing",
         "invoice",
         "receipt"
       ],
-      "path": "templates/invoice-ready@1.0.0.json",
       "url": "templates/invoice-ready@1.0.0.json",
-      "useCase": "Send customers a premium invoice notice with direct access to billing details.",
+      "preview": "previews/invoice-ready@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/invoice-ready@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "payment-failed",
-      "slug": "payment-failed",
       "name": "Payment Failed",
       "version": "1.0.0",
       "category": "billing",
       "description": "A billing recovery email with one clear payment update action.",
+      "useCase": "Notify a customer that a payment failed and prompt them to update payment details.",
       "tags": [
         "transactional",
         "billing",
         "payment-failed"
       ],
-      "path": "templates/payment-failed@1.0.0.json",
       "url": "templates/payment-failed@1.0.0.json",
-      "useCase": "Notify a customer that a payment failed and prompt them to update payment details.",
-      "preview": "previews/payment-failed@1.0.0.png"
+      "preview": "previews/payment-failed@1.0.0.png",
+      "author": "TemplateForge",
+      "license": "MIT"
     },
     {
       "id": "payment-method-expiring",
-      "slug": "payment-method-expiring",
       "name": "Payment Method Expiring",
       "version": "1.0.0",
       "category": "billing",
       "description": "A proactive billing email with urgency, but without alarmist copy.",
+      "useCase": "Prompt customers to update an expiring payment method before renewal fails.",
       "tags": [
         "transactional",
         "billing",
         "payment-method",
         "renewal"
       ],
-      "path": "templates/payment-method-expiring@1.0.0.json",
       "url": "templates/payment-method-expiring@1.0.0.json",
-      "useCase": "Prompt customers to update an expiring payment method before renewal fails.",
+      "preview": "previews/payment-method-expiring@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/payment-method-expiring@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "plan-upgrade-confirmation",
-      "slug": "plan-upgrade-confirmation",
       "name": "Plan Upgrade Confirmation",
       "version": "1.0.0",
       "category": "billing",
       "description": "A premium upgrade confirmation with plan clarity and immediate next steps.",
+      "useCase": "Confirm a successful plan upgrade and point customers to newly available capabilities.",
       "tags": [
         "transactional",
         "billing",
         "upgrade",
         "subscription"
       ],
-      "path": "templates/plan-upgrade-confirmation@1.0.0.json",
       "url": "templates/plan-upgrade-confirmation@1.0.0.json",
-      "useCase": "Confirm a successful plan upgrade and point customers to newly available capabilities.",
+      "preview": "previews/plan-upgrade-confirmation@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/plan-upgrade-confirmation@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "refund-processed",
-      "slug": "refund-processed",
       "name": "Refund Processed",
       "version": "1.0.0",
       "category": "billing",
       "description": "A calm refund confirmation email with premium customer-care positioning.",
+      "useCase": "Confirm a refund with clear timing expectations and support access.",
       "tags": [
         "transactional",
         "billing",
         "refund",
         "customer-care"
       ],
-      "path": "templates/refund-processed@1.0.0.json",
       "url": "templates/refund-processed@1.0.0.json",
-      "useCase": "Confirm a refund with clear timing expectations and support access.",
+      "preview": "previews/refund-processed@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/refund-processed@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "subscription-renewal-reminder",
-      "slug": "subscription-renewal-reminder",
       "name": "Subscription Renewal Reminder",
       "version": "1.0.0",
       "category": "billing",
       "description": "A polished renewal notice that reduces billing surprise and support load.",
+      "useCase": "Remind subscribers about an upcoming renewal with transparent billing details.",
       "tags": [
         "transactional",
         "billing",
         "subscription",
         "renewal"
       ],
-      "path": "templates/subscription-renewal-reminder@1.0.0.json",
       "url": "templates/subscription-renewal-reminder@1.0.0.json",
-      "useCase": "Remind subscribers about an upcoming renewal with transparent billing details.",
+      "preview": "previews/subscription-renewal-reminder@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/subscription-renewal-reminder@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "abandoned-checkout",
-      "slug": "abandoned-checkout",
       "name": "Abandoned Checkout",
       "version": "1.0.0",
       "category": "commerce",
       "description": "A conversion-oriented checkout recovery email that stays simple and brand-safe.",
+      "useCase": "Recover a checkout with restrained urgency and a premium product reminder.",
       "tags": [
         "transactional",
         "commerce",
         "checkout",
         "recovery"
       ],
-      "path": "templates/abandoned-checkout@1.0.0.json",
       "url": "templates/abandoned-checkout@1.0.0.json",
-      "useCase": "Recover a checkout with restrained urgency and a premium product reminder.",
+      "preview": "previews/abandoned-checkout@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/abandoned-checkout@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "delivery-confirmation",
-      "slug": "delivery-confirmation",
       "name": "Delivery Confirmation",
       "version": "1.0.0",
       "category": "commerce",
       "description": "A polished delivery confirmation that closes the loop without sounding generic.",
+      "useCase": "Confirm delivery and direct customers to support or order details if needed.",
       "tags": [
         "transactional",
         "commerce",
         "delivery",
         "tracking"
       ],
-      "path": "templates/delivery-confirmation@1.0.0.json",
       "url": "templates/delivery-confirmation@1.0.0.json",
-      "useCase": "Confirm delivery and direct customers to support or order details if needed.",
+      "preview": "previews/delivery-confirmation@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/delivery-confirmation@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "order-confirmation",
-      "slug": "order-confirmation",
       "name": "Order Confirmation",
       "version": "1.0.0",
       "category": "commerce",
       "description": "A premium commerce confirmation email for product, ticket, or digital purchases.",
+      "useCase": "Confirm a purchase with strong order summary hierarchy and a clear receipt link.",
       "tags": [
         "transactional",
         "commerce",
         "order",
         "receipt"
       ],
-      "path": "templates/order-confirmation@1.0.0.json",
       "url": "templates/order-confirmation@1.0.0.json",
-      "useCase": "Confirm a purchase with strong order summary hierarchy and a clear receipt link.",
+      "preview": "previews/order-confirmation@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/order-confirmation@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "return-approved",
-      "slug": "return-approved",
       "name": "Return Approved",
       "version": "1.0.0",
       "category": "commerce",
       "description": "A customer-care return email with clear logistics and a premium support tone.",
+      "useCase": "Approve a return request with next steps, deadline, and label access.",
       "tags": [
         "transactional",
         "commerce",
         "returns",
         "support"
       ],
-      "path": "templates/return-approved@1.0.0.json",
       "url": "templates/return-approved@1.0.0.json",
-      "useCase": "Approve a return request with next steps, deadline, and label access.",
+      "preview": "previews/return-approved@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/return-approved@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "shipping-update",
-      "slug": "shipping-update",
       "name": "Shipping Update",
       "version": "1.0.0",
       "category": "commerce",
       "description": "A refined shipping email with carrier metadata and tracking as the primary action.",
+      "useCase": "Notify customers when a shipment has been handed to a carrier.",
       "tags": [
         "transactional",
         "commerce",
         "shipping",
         "tracking"
       ],
-      "path": "templates/shipping-update@1.0.0.json",
       "url": "templates/shipping-update@1.0.0.json",
-      "useCase": "Notify customers when a shipment has been handed to a carrier.",
+      "preview": "previews/shipping-update@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/shipping-update@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "approval-request",
-      "slug": "approval-request",
       "name": "Approval Request",
       "version": "1.0.0",
       "category": "notifications",
       "description": "A polished workflow email for approvals, reviews, and internal controls.",
+      "useCase": "Send approval requests with due dates, requester context, and a direct review action.",
       "tags": [
         "transactional",
         "notifications",
         "approval",
         "workflow"
       ],
-      "path": "templates/approval-request@1.0.0.json",
       "url": "templates/approval-request@1.0.0.json",
-      "useCase": "Send approval requests with due dates, requester context, and a direct review action.",
+      "preview": "previews/approval-request@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/approval-request@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "comment-mention",
-      "slug": "comment-mention",
       "name": "Comment Mention",
       "version": "1.0.0",
       "category": "notifications",
       "description": "A clean collaboration email with context, quote, and one reply action.",
+      "useCase": "Notify users when they are mentioned in a comment or collaborative thread.",
       "tags": [
         "transactional",
         "notifications",
         "mention",
         "collaboration"
       ],
-      "path": "templates/comment-mention@1.0.0.json",
       "url": "templates/comment-mention@1.0.0.json",
-      "useCase": "Notify users when they are mentioned in a comment or collaborative thread.",
+      "preview": "previews/comment-mention@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/comment-mention@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "incident-resolved",
-      "slug": "incident-resolved",
       "name": "Incident Resolved",
       "version": "1.0.0",
       "category": "notifications",
       "description": "A status-update email that feels calm, credible, and operationally mature.",
+      "useCase": "Send customers a concise incident resolution notice with status and postmortem access.",
       "tags": [
         "transactional",
         "notifications",
         "status",
         "incident"
       ],
-      "path": "templates/incident-resolved@1.0.0.json",
       "url": "templates/incident-resolved@1.0.0.json",
-      "useCase": "Send customers a concise incident resolution notice with status and postmortem access.",
+      "preview": "previews/incident-resolved@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/incident-resolved@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "integration-disconnected",
-      "slug": "integration-disconnected",
       "name": "Integration Disconnected",
       "version": "1.0.0",
       "category": "notifications",
       "description": "A high-signal integration alert that gives teams the fastest recovery path.",
+      "useCase": "Alert workspace owners when an integration needs reconnection.",
       "tags": [
         "transactional",
         "notifications",
         "integration",
         "alert"
       ],
-      "path": "templates/integration-disconnected@1.0.0.json",
       "url": "templates/integration-disconnected@1.0.0.json",
-      "useCase": "Alert workspace owners when an integration needs reconnection.",
+      "preview": "previews/integration-disconnected@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/integration-disconnected@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "report-ready",
-      "slug": "report-ready",
       "name": "Report Ready",
       "version": "1.0.0",
       "category": "notifications",
       "description": "A premium completion email for exports, analytics, and generated documents.",
+      "useCase": "Notify customers when a generated report, export, or analysis is ready.",
       "tags": [
         "transactional",
         "notifications",
         "report",
         "export"
       ],
-      "path": "templates/report-ready@1.0.0.json",
       "url": "templates/report-ready@1.0.0.json",
-      "useCase": "Notify customers when a generated report, export, or analysis is ready.",
+      "preview": "previews/report-ready@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/report-ready@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "onboarding-checklist",
-      "slug": "onboarding-checklist",
       "name": "Onboarding Checklist",
       "version": "1.0.0",
       "category": "onboarding",
       "description": "A focused progress email that makes the remaining setup path feel manageable.",
+      "useCase": "Bring users back to finish setup after they complete part of onboarding.",
       "tags": [
         "transactional",
         "onboarding",
         "checklist",
         "activation"
       ],
-      "path": "templates/onboarding-checklist@1.0.0.json",
       "url": "templates/onboarding-checklist@1.0.0.json",
-      "useCase": "Bring users back to finish setup after they complete part of onboarding.",
+      "preview": "previews/onboarding-checklist@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/onboarding-checklist@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "product-tour-followup",
-      "slug": "product-tour-followup",
       "name": "Product Tour Follow-up",
       "version": "1.0.0",
       "category": "onboarding",
       "description": "A crisp lifecycle email that turns a guided tour into product adoption.",
+      "useCase": "Follow up after a product tour with one contextual next action.",
       "tags": [
         "transactional",
         "onboarding",
         "product-tour",
         "activation"
       ],
-      "path": "templates/product-tour-followup@1.0.0.json",
       "url": "templates/product-tour-followup@1.0.0.json",
-      "useCase": "Follow up after a product tour with one contextual next action.",
+      "preview": "previews/product-tour-followup@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/product-tour-followup@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "team-member-added",
-      "slug": "team-member-added",
       "name": "Team Member Added",
       "version": "1.0.0",
       "category": "onboarding",
       "description": "A refined team activity email with account governance and role visibility.",
+      "useCase": "Notify admins when a new team member joins their workspace.",
       "tags": [
         "transactional",
         "onboarding",
         "team",
         "permissions"
       ],
-      "path": "templates/team-member-added@1.0.0.json",
       "url": "templates/team-member-added@1.0.0.json",
-      "useCase": "Notify admins when a new team member joins their workspace.",
+      "preview": "previews/team-member-added@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/team-member-added@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "trial-started",
-      "slug": "trial-started",
       "name": "Trial Started",
       "version": "1.0.0",
       "category": "onboarding",
       "description": "A clean trial activation email with a polished product-dashboard call to action.",
+      "useCase": "Confirm trial activation and move the customer into the first successful product action.",
       "tags": [
         "transactional",
         "onboarding",
         "trial",
         "activation"
       ],
-      "path": "templates/trial-started@1.0.0.json",
       "url": "templates/trial-started@1.0.0.json",
-      "useCase": "Confirm trial activation and move the customer into the first successful product action.",
+      "preview": "previews/trial-started@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/trial-started@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "welcome-account",
-      "slug": "welcome-account",
       "name": "Welcome account",
       "version": "1.0.0",
       "category": "onboarding",
       "description": "A clean onboarding email for a newly created workspace or account.",
+      "useCase": "A clean onboarding email for a newly created workspace or account.",
       "tags": [
         "onboarding",
         "account",
         "welcome"
       ],
-      "path": "templates/welcome-account@1.0.0.json",
       "url": "templates/welcome-account@1.0.0.json",
+      "preview": "previews/welcome-account@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/welcome-account@1.0.0.png"
+      "license": "MIT"
     },
     {
       "id": "workspace-invite",
-      "slug": "workspace-invite",
       "name": "Workspace Invite",
       "version": "1.0.0",
       "category": "onboarding",
       "description": "A premium team invitation email with a bold workspace handoff and clear expiry details.",
+      "useCase": "Invite a teammate into a workspace with a polished, high-trust acceptance flow.",
       "tags": [
         "transactional",
         "onboarding",
         "workspace",
         "invite"
       ],
-      "path": "templates/workspace-invite@1.0.0.json",
       "url": "templates/workspace-invite@1.0.0.json",
-      "useCase": "Invite a teammate into a workspace with a polished, high-trust acceptance flow.",
+      "preview": "previews/workspace-invite@1.0.0.png",
       "author": "TemplateForge",
-      "license": "MIT",
-      "preview": "previews/workspace-invite@1.0.0.png"
+      "license": "MIT"
     }
   ]
 }

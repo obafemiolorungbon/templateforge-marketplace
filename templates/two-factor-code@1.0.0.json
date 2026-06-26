@@ -1,12 +1,13 @@
 {
+  "schemaVersion": "1.0",
   "id": "two-factor-code",
   "slug": "two-factor-code",
   "name": "Two-factor Code",
   "version": "1.0.0",
   "category": "authentication",
+  "subject": "{{code}} is your {{product_name}} verification code",
   "useCase": "Send a short-lived 2FA or OTP code in a clear, high-contrast format.",
   "description": "A focused verification email with a large code treatment and minimal distractions.",
-  "subject": "{{code}} is your {{product_name}} verification code",
   "tags": [
     "transactional",
     "authentication",
@@ -61,7 +62,8 @@
       "type": "string",
       "description": "Absolute URL to sign-in page.",
       "required": true,
-      "example": "https://app.example.com/sign-in"
+      "example": "https://app.example.com/sign-in",
+      "format": "url"
     }
   ],
   "sampleVariables": {
@@ -73,18 +75,10 @@
     "location": "London, UK",
     "signin_url": "https://app.example.com/sign-in"
   },
-  "qualityScore": {
-    "visual_quality": 9,
-    "copy_clarity": 9,
-    "mobile_readiness": 9,
-    "marketplace_usefulness": 9,
-    "implementation_safety": 10,
-    "originality": 9
-  },
-  "text": "Hi {{first_name}},\n\nenter this code to finish signing in to {{product_name}}. It expires in {{expires_in}}.\n\nYour code: {{code}}\nExpires in: {{expires_in}}\nDevice: {{device_name}}\nLocation: {{location}}\n\nOpen sign-in: {{signin_url}}\n\nNever share this code with anyone. Support will never ask for it.",
   "mjml": "<mjml>\n  <mj-head>\n    <mj-title>Two-factor Code</mj-title>\n    <mj-preview>A focused verification email with a large code treatment and minimal distractions.</mj-preview>\n    <mj-attributes>\n      <mj-all font-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif\" />\n      <mj-text color=\"#111827\" font-size=\"16px\" line-height=\"24px\" />\n      <mj-section padding=\"0\" />\n      <mj-button border-radius=\"999px\" font-size=\"15px\" font-weight=\"800\" inner-padding=\"15px 24px\" />\n    </mj-attributes>\n  </mj-head>\n  <mj-body background-color=\"#f6f8ff\" width=\"600px\">\n    <mj-section padding=\"28px 22px 14px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"12px\" font-weight=\"800\" letter-spacing=\"1.8px\" text-transform=\"uppercase\">{{product_name}}</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#0b1220\" border-radius=\"22px 22px 0 0\" padding=\"34px 34px 28px\">\n      <mj-column>\n        <mj-text color=\"#4285f4\" font-size=\"11px\" font-weight=\"900\" letter-spacing=\"2px\" text-transform=\"uppercase\" padding=\"0 0 14px\">Verification code</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"30px\" font-weight=\"850\" line-height=\"36px\" padding=\"0 0 12px\">Confirm it is you</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"15px\" line-height=\"24px\" padding=\"0\">Hi {{first_name}}, enter this code to finish signing in to {{product_name}}. It expires in {{expires_in}}.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#ffffff\" border-radius=\"0 0 22px 22px\" padding=\"0 30px 30px\">\n      <mj-column>\n        <mj-spacer height=\"26px\" />\n        <mj-text background-color=\"#eaf2ff\" color=\"#111827\" font-size=\"13px\" font-weight=\"800\" line-height=\"20px\" padding=\"18px 20px 4px\">Your code</mj-text>\n        <mj-text background-color=\"#eaf2ff\" color=\"#111827\" font-size=\"28px\" font-weight=\"900\" line-height=\"34px\" padding=\"0 20px 18px\">{{code}}</mj-text>\n        <mj-table padding=\"22px 0 4px\">\n          <tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Expires in</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{expires_in}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Device</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{device_name}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Location</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{location}}</td></tr>\n        </mj-table>\n        <mj-button href=\"{{signin_url}}\" background-color=\"#4285f4\" color=\"#ffffff\" padding=\"26px 0 8px\">Open sign-in</mj-button>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"13px\" line-height=\"20px\" padding=\"18px 10px 0\">Never share this code with anyone. Support will never ask for it.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section padding=\"22px 20px 40px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"12px\" line-height=\"18px\">TemplateForge marketplace template. Update branding and URLs before production use.</mj-text>\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>",
+  "text": "Hi {{first_name}},\n\nenter this code to finish signing in to {{product_name}}. It expires in {{expires_in}}.\n\nYour code: {{code}}\nExpires in: {{expires_in}}\nDevice: {{device_name}}\nLocation: {{location}}\n\nOpen sign-in: {{signin_url}}\n\nNever share this code with anyone. Support will never ask for it.",
+  "preview": "previews/two-factor-code@1.0.0.png",
   "author": "TemplateForge",
   "license": "MIT",
-  "warnings": [],
-  "preview": "previews/two-factor-code@1.0.0.png"
+  "warnings": []
 }

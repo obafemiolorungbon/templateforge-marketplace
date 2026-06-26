@@ -1,13 +1,17 @@
 {
+  "schemaVersion": "1.0",
   "id": "welcome-account",
-  "version": "1.0.0",
-  "name": "Welcome account",
   "slug": "welcome-account",
-  "description": "A clean onboarding email for a newly created workspace or account.",
+  "name": "Welcome account",
+  "version": "1.0.0",
   "category": "onboarding",
   "subject": "Welcome to {{product_name}}, {{first_name}}",
-  "mjml": "<mjml>\n  <mj-body background-color=\"#f4f4f5\">\n    <mj-section padding=\"32px\">\n      <mj-column background-color=\"#ffffff\" border-radius=\"18px\" padding=\"28px\">\n        <mj-text font-size=\"22px\" font-weight=\"700\" color=\"#18181b\">Your workspace is ready</mj-text>\n        <mj-text color=\"#3f3f46\" line-height=\"1.6\">Hi {{first_name}}, your {{product_name}} workspace has been created. Open the dashboard to finish setup and start sending transactional email.</mj-text>\n        <mj-button background-color=\"#a7c957\" color=\"#18181b\" href=\"{{dashboard_url}}\">Open dashboard</mj-button>\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>",
-  "text": "Hi {{first_name}},\n\nYour {{product_name}} workspace has been created. Open the dashboard to finish setup:\n\n{{dashboard_url}}",
+  "description": "A clean onboarding email for a newly created workspace or account.",
+  "tags": [
+    "onboarding",
+    "account",
+    "welcome"
+  ],
   "variables": [
     {
       "name": "first_name",
@@ -28,7 +32,8 @@
       "type": "string",
       "required": true,
       "description": "Absolute URL to the product dashboard.",
-      "example": "https://app.example.com/dashboard"
+      "example": "https://app.example.com/dashboard",
+      "format": "url"
     }
   ],
   "sampleVariables": {
@@ -36,13 +41,11 @@
     "product_name": "TemplateForge",
     "dashboard_url": "https://app.example.com/dashboard"
   },
-  "tags": [
-    "onboarding",
-    "account",
-    "welcome"
-  ],
+  "mjml": "<mjml>\n  <mj-body background-color=\"#f4f4f5\">\n    <mj-section padding=\"32px\">\n      <mj-column background-color=\"#ffffff\" border-radius=\"18px\" padding=\"28px\">\n        <mj-text font-size=\"22px\" font-weight=\"700\" color=\"#18181b\">Your workspace is ready</mj-text>\n        <mj-text color=\"#3f3f46\" line-height=\"1.6\">Hi {{first_name}}, your {{product_name}} workspace has been created. Open the dashboard to finish setup and start sending transactional email.</mj-text>\n        <mj-button background-color=\"#a7c957\" color=\"#18181b\" href=\"{{dashboard_url}}\">Open dashboard</mj-button>\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>",
+  "text": "Hi {{first_name}},\n\nYour {{product_name}} workspace has been created. Open the dashboard to finish setup:\n\n{{dashboard_url}}",
+  "preview": "previews/welcome-account@1.0.0.png",
   "author": "TemplateForge",
   "license": "MIT",
   "warnings": [],
-  "preview": "previews/welcome-account@1.0.0.png"
+  "useCase": "A clean onboarding email for a newly created workspace or account."
 }

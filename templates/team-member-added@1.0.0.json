@@ -1,12 +1,13 @@
 {
+  "schemaVersion": "1.0",
   "id": "team-member-added",
   "slug": "team-member-added",
   "name": "Team Member Added",
   "version": "1.0.0",
   "category": "onboarding",
+  "subject": "{{member_name}} joined {{workspace_name}}",
   "useCase": "Notify admins when a new team member joins their workspace.",
   "description": "A refined team activity email with account governance and role visibility.",
-  "subject": "{{member_name}} joined {{workspace_name}}",
   "tags": [
     "transactional",
     "onboarding",
@@ -54,14 +55,16 @@
       "type": "string",
       "description": "Human-readable join time.",
       "required": true,
-      "example": "Today at 10:24 AM"
+      "example": "Today at 10:24 AM",
+      "format": "date-time"
     },
     {
       "name": "settings_url",
       "type": "string",
       "description": "Absolute URL to workspace settings.",
       "required": true,
-      "example": "https://app.example.com/settings/team"
+      "example": "https://app.example.com/settings/team",
+      "format": "url"
     }
   ],
   "sampleVariables": {
@@ -73,18 +76,10 @@
     "joined_at": "Today at 10:24 AM",
     "settings_url": "https://app.example.com/settings/team"
   },
-  "qualityScore": {
-    "visual_quality": 9,
-    "copy_clarity": 9,
-    "mobile_readiness": 9,
-    "marketplace_usefulness": 9,
-    "implementation_safety": 10,
-    "originality": 9
-  },
-  "text": "Hi {{first_name}},\n\n{{member_name}} accepted the invitation and now has access to {{workspace_name}} with the {{role_name}} role.\n\nNew member: {{member_name}}\nRole: {{role_name}}\nJoined: {{joined_at}}\nWorkspace: {{workspace_name}}\n\nReview access: {{settings_url}}\n\nYou can adjust permissions, groups, and audit settings from workspace settings.",
   "mjml": "<mjml>\n  <mj-head>\n    <mj-title>Team Member Added</mj-title>\n    <mj-preview>A refined team activity email with account governance and role visibility.</mj-preview>\n    <mj-attributes>\n      <mj-all font-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif\" />\n      <mj-text color=\"#181229\" font-size=\"16px\" line-height=\"24px\" />\n      <mj-section padding=\"0\" />\n      <mj-button border-radius=\"999px\" font-size=\"15px\" font-weight=\"800\" inner-padding=\"15px 24px\" />\n    </mj-attributes>\n  </mj-head>\n  <mj-body background-color=\"#f5f3ff\" width=\"600px\">\n    <mj-section padding=\"28px 22px 14px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#625a72\" font-size=\"12px\" font-weight=\"800\" letter-spacing=\"1.8px\" text-transform=\"uppercase\">{{product_name}}</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#1e123b\" border-radius=\"22px 22px 0 0\" padding=\"34px 34px 28px\">\n      <mj-column>\n        <mj-text color=\"#8b5cf6\" font-size=\"11px\" font-weight=\"900\" letter-spacing=\"2px\" text-transform=\"uppercase\" padding=\"0 0 14px\">Team update</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"30px\" font-weight=\"850\" line-height=\"36px\" padding=\"0 0 12px\">{{member_name}} is now part of {{workspace_name}}</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"15px\" line-height=\"24px\" padding=\"0\">Hi {{first_name}}, {{member_name}} accepted the invitation and now has access to {{workspace_name}} with the {{role_name}} role.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#ffffff\" border-radius=\"0 0 22px 22px\" padding=\"0 30px 30px\">\n      <mj-column>\n        <mj-spacer height=\"26px\" />\n        <mj-text background-color=\"#ede9fe\" color=\"#181229\" font-size=\"13px\" font-weight=\"800\" line-height=\"20px\" padding=\"18px 20px 4px\">New member</mj-text>\n        <mj-text background-color=\"#ede9fe\" color=\"#181229\" font-size=\"28px\" font-weight=\"900\" line-height=\"34px\" padding=\"0 20px 18px\">{{member_name}}</mj-text>\n        <mj-table padding=\"22px 0 4px\">\n          <tr><td style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#625a72;font-size:13px;\">Role</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#181229;font-size:13px;font-weight:700;\">{{role_name}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#625a72;font-size:13px;\">Joined</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#181229;font-size:13px;font-weight:700;\">{{joined_at}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#625a72;font-size:13px;\">Workspace</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#181229;font-size:13px;font-weight:700;\">{{workspace_name}}</td></tr>\n        </mj-table>\n        <mj-button href=\"{{settings_url}}\" background-color=\"#8b5cf6\" color=\"#ffffff\" padding=\"26px 0 8px\">Review access</mj-button>\n        <mj-text align=\"center\" color=\"#625a72\" font-size=\"13px\" line-height=\"20px\" padding=\"18px 10px 0\">You can adjust permissions, groups, and audit settings from workspace settings.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section padding=\"22px 20px 40px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#625a72\" font-size=\"12px\" line-height=\"18px\">TemplateForge marketplace template. Update branding and URLs before production use.</mj-text>\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>",
+  "text": "Hi {{first_name}},\n\n{{member_name}} accepted the invitation and now has access to {{workspace_name}} with the {{role_name}} role.\n\nNew member: {{member_name}}\nRole: {{role_name}}\nJoined: {{joined_at}}\nWorkspace: {{workspace_name}}\n\nReview access: {{settings_url}}\n\nYou can adjust permissions, groups, and audit settings from workspace settings.",
+  "preview": "previews/team-member-added@1.0.0.png",
   "author": "TemplateForge",
   "license": "MIT",
-  "warnings": [],
-  "preview": "previews/team-member-added@1.0.0.png"
+  "warnings": []
 }

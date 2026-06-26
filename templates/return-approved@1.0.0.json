@@ -1,12 +1,13 @@
 {
+  "schemaVersion": "1.0",
   "id": "return-approved",
   "slug": "return-approved",
   "name": "Return Approved",
   "version": "1.0.0",
   "category": "commerce",
+  "subject": "Your return for order {{order_number}} is approved",
   "useCase": "Approve a return request with next steps, deadline, and label access.",
   "description": "A customer-care return email with clear logistics and a premium support tone.",
-  "subject": "Your return for order {{order_number}} is approved",
   "tags": [
     "transactional",
     "commerce",
@@ -68,7 +69,8 @@
       "type": "string",
       "description": "Absolute URL to return label.",
       "required": true,
-      "example": "https://shop.example.com/returns/RA-9128/label"
+      "example": "https://shop.example.com/returns/RA-9128/label",
+      "format": "url"
     }
   ],
   "sampleVariables": {
@@ -81,18 +83,10 @@
     "item_count": "2",
     "return_label_url": "https://shop.example.com/returns/RA-9128/label"
   },
-  "qualityScore": {
-    "visual_quality": 9,
-    "copy_clarity": 9,
-    "mobile_readiness": 9,
-    "marketplace_usefulness": 9,
-    "implementation_safety": 10,
-    "originality": 9
-  },
-  "text": "Hi {{first_name}},\n\nyour return request for order {{order_number}} was approved. Use the return label before {{return_deadline}}.\n\nReturn by: {{return_deadline}}\nReturn ID: {{return_id}}\nRefund method: {{refund_method}}\nItems: {{item_count}}\n\nDownload return label: {{return_label_url}}\n\nRefund timing starts after the returned items are scanned by the carrier.",
   "mjml": "<mjml>\n  <mj-head>\n    <mj-title>Return Approved</mj-title>\n    <mj-preview>A customer-care return email with clear logistics and a premium support tone.</mj-preview>\n    <mj-attributes>\n      <mj-all font-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif\" />\n      <mj-text color=\"#181229\" font-size=\"16px\" line-height=\"24px\" />\n      <mj-section padding=\"0\" />\n      <mj-button border-radius=\"999px\" font-size=\"15px\" font-weight=\"800\" inner-padding=\"15px 24px\" />\n    </mj-attributes>\n  </mj-head>\n  <mj-body background-color=\"#f5f3ff\" width=\"600px\">\n    <mj-section padding=\"28px 22px 14px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#625a72\" font-size=\"12px\" font-weight=\"800\" letter-spacing=\"1.8px\" text-transform=\"uppercase\">{{product_name}}</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#1e123b\" border-radius=\"22px 22px 0 0\" padding=\"34px 34px 28px\">\n      <mj-column>\n        <mj-text color=\"#8b5cf6\" font-size=\"11px\" font-weight=\"900\" letter-spacing=\"2px\" text-transform=\"uppercase\" padding=\"0 0 14px\">Return approved</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"30px\" font-weight=\"850\" line-height=\"36px\" padding=\"0 0 12px\">Your return is ready to send</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"15px\" line-height=\"24px\" padding=\"0\">Hi {{first_name}}, your return request for order {{order_number}} was approved. Use the return label before {{return_deadline}}.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#ffffff\" border-radius=\"0 0 22px 22px\" padding=\"0 30px 30px\">\n      <mj-column>\n        <mj-spacer height=\"26px\" />\n        <mj-text background-color=\"#ede9fe\" color=\"#181229\" font-size=\"13px\" font-weight=\"800\" line-height=\"20px\" padding=\"18px 20px 4px\">Return by</mj-text>\n        <mj-text background-color=\"#ede9fe\" color=\"#181229\" font-size=\"28px\" font-weight=\"900\" line-height=\"34px\" padding=\"0 20px 18px\">{{return_deadline}}</mj-text>\n        <mj-table padding=\"22px 0 4px\">\n          <tr><td style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#625a72;font-size:13px;\">Return ID</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#181229;font-size:13px;font-weight:700;\">{{return_id}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#625a72;font-size:13px;\">Refund method</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#181229;font-size:13px;font-weight:700;\">{{refund_method}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#625a72;font-size:13px;\">Items</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#181229;font-size:13px;font-weight:700;\">{{item_count}}</td></tr>\n        </mj-table>\n        <mj-button href=\"{{return_label_url}}\" background-color=\"#8b5cf6\" color=\"#ffffff\" padding=\"26px 0 8px\">Download return label</mj-button>\n        <mj-text align=\"center\" color=\"#625a72\" font-size=\"13px\" line-height=\"20px\" padding=\"18px 10px 0\">Refund timing starts after the returned items are scanned by the carrier.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section padding=\"22px 20px 40px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#625a72\" font-size=\"12px\" line-height=\"18px\">TemplateForge marketplace template. Update branding and URLs before production use.</mj-text>\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>",
+  "text": "Hi {{first_name}},\n\nyour return request for order {{order_number}} was approved. Use the return label before {{return_deadline}}.\n\nReturn by: {{return_deadline}}\nReturn ID: {{return_id}}\nRefund method: {{refund_method}}\nItems: {{item_count}}\n\nDownload return label: {{return_label_url}}\n\nRefund timing starts after the returned items are scanned by the carrier.",
+  "preview": "previews/return-approved@1.0.0.png",
   "author": "TemplateForge",
   "license": "MIT",
-  "warnings": [],
-  "preview": "previews/return-approved@1.0.0.png"
+  "warnings": []
 }
