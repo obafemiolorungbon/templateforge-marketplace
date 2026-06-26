@@ -1,0 +1,89 @@
+{
+  "id": "subscription-renewal-reminder",
+  "slug": "subscription-renewal-reminder",
+  "name": "Subscription Renewal Reminder",
+  "version": "1.0.0",
+  "category": "billing",
+  "useCase": "Remind subscribers about an upcoming renewal with transparent billing details.",
+  "description": "A polished renewal notice that reduces billing surprise and support load.",
+  "subject": "{{plan_name}} renews on {{renewal_date}}",
+  "tags": [
+    "transactional",
+    "billing",
+    "subscription",
+    "renewal"
+  ],
+  "variables": [
+    {
+      "name": "product_name",
+      "type": "string",
+      "description": "Product name.",
+      "required": true,
+      "example": "TemplateForge"
+    },
+    {
+      "name": "first_name",
+      "type": "string",
+      "description": "Recipient first name.",
+      "required": true,
+      "example": "Priya"
+    },
+    {
+      "name": "plan_name",
+      "type": "string",
+      "description": "Subscription plan name.",
+      "required": true,
+      "example": "Business"
+    },
+    {
+      "name": "renewal_date",
+      "type": "string",
+      "description": "Upcoming renewal date.",
+      "required": true,
+      "example": "July 26, 2026"
+    },
+    {
+      "name": "renewal_amount",
+      "type": "string",
+      "description": "Renewal total.",
+      "required": true,
+      "example": "$99.00"
+    },
+    {
+      "name": "billing_owner",
+      "type": "string",
+      "description": "Billing owner name or email.",
+      "required": true,
+      "example": "finance@example.com"
+    },
+    {
+      "name": "subscription_url",
+      "type": "url",
+      "description": "Absolute URL to subscription settings.",
+      "required": true,
+      "example": "https://app.example.com/billing/subscription"
+    }
+  ],
+  "sampleVariables": {
+    "product_name": "TemplateForge",
+    "first_name": "Priya",
+    "plan_name": "Business",
+    "renewal_date": "July 26, 2026",
+    "renewal_amount": "$99.00",
+    "billing_owner": "finance@example.com",
+    "subscription_url": "https://app.example.com/billing/subscription"
+  },
+  "qualityScore": {
+    "visual_quality": 9,
+    "copy_clarity": 9,
+    "mobile_readiness": 9,
+    "marketplace_usefulness": 9,
+    "implementation_safety": 10,
+    "originality": 9
+  },
+  "text": "Hi {{first_name}},\n\nyour {{product_name}} subscription renews on {{renewal_date}}. Here is the renewal summary for your records.\n\nRenewal amount: {{renewal_amount}}\nPlan: {{plan_name}}\nRenewal date: {{renewal_date}}\nBilling owner: {{billing_owner}}\n\nManage subscription: {{subscription_url}}\n\nPlan changes made before renewal will be reflected on the next invoice.",
+  "mjml": "<mjml>\n  <mj-head>\n    <mj-title>Subscription Renewal Reminder</mj-title>\n    <mj-preview>A polished renewal notice that reduces billing surprise and support load.</mj-preview>\n    <mj-attributes>\n      <mj-all font-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif\" />\n      <mj-text color=\"#111827\" font-size=\"16px\" line-height=\"24px\" />\n      <mj-section padding=\"0\" />\n      <mj-button border-radius=\"999px\" font-size=\"15px\" font-weight=\"800\" inner-padding=\"15px 24px\" />\n    </mj-attributes>\n  </mj-head>\n  <mj-body background-color=\"#f6f8ff\" width=\"600px\">\n    <mj-section padding=\"28px 22px 14px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"12px\" font-weight=\"800\" letter-spacing=\"1.8px\" text-transform=\"uppercase\">{{product_name}}</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#0b1220\" border-radius=\"22px 22px 0 0\" padding=\"34px 34px 28px\">\n      <mj-column>\n        <mj-text color=\"#4285f4\" font-size=\"11px\" font-weight=\"900\" letter-spacing=\"2px\" text-transform=\"uppercase\" padding=\"0 0 14px\">Upcoming renewal</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"30px\" font-weight=\"850\" line-height=\"36px\" padding=\"0 0 12px\">{{plan_name}} renews soon</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"15px\" line-height=\"24px\" padding=\"0\" opacity=\"0.84\">Hi {{first_name}}, your {{product_name}} subscription renews on {{renewal_date}}. Here is the renewal summary for your records.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#ffffff\" border-radius=\"0 0 22px 22px\" padding=\"0 30px 30px\">\n      <mj-column>\n        <mj-spacer height=\"26px\" />\n        <mj-text background-color=\"#eaf2ff\" color=\"#111827\" border-radius=\"18px\" font-size=\"13px\" font-weight=\"800\" line-height=\"20px\" padding=\"18px 20px 4px\">Renewal amount</mj-text>\n        <mj-text background-color=\"#eaf2ff\" color=\"#111827\" border-radius=\"18px\" font-size=\"28px\" font-weight=\"900\" line-height=\"34px\" padding=\"0 20px 18px\">{{renewal_amount}}</mj-text>\n        <mj-table padding=\"22px 0 4px\">\n          <tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Plan</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{plan_name}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Renewal date</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{renewal_date}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Billing owner</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{billing_owner}}</td></tr>\n        </mj-table>\n        <mj-button href=\"{{subscription_url}}\" background-color=\"#4285f4\" color=\"#ffffff\" padding=\"26px 0 8px\">Manage subscription</mj-button>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"13px\" line-height=\"20px\" padding=\"18px 10px 0\">Plan changes made before renewal will be reflected on the next invoice.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section padding=\"22px 20px 40px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"12px\" line-height=\"18px\">TemplateForge marketplace template. Update branding and URLs before production use.</mj-text>\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>",
+  "author": "TemplateForge",
+  "license": "MIT",
+  "warnings": []
+}

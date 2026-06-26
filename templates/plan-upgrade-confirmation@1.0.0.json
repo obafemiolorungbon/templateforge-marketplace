@@ -1,0 +1,89 @@
+{
+  "id": "plan-upgrade-confirmation",
+  "slug": "plan-upgrade-confirmation",
+  "name": "Plan Upgrade Confirmation",
+  "version": "1.0.0",
+  "category": "billing",
+  "useCase": "Confirm a successful plan upgrade and point customers to newly available capabilities.",
+  "description": "A premium upgrade confirmation with plan clarity and immediate next steps.",
+  "subject": "You upgraded to {{plan_name}}",
+  "tags": [
+    "transactional",
+    "billing",
+    "upgrade",
+    "subscription"
+  ],
+  "variables": [
+    {
+      "name": "product_name",
+      "type": "string",
+      "description": "Product name.",
+      "required": true,
+      "example": "TemplateForge"
+    },
+    {
+      "name": "first_name",
+      "type": "string",
+      "description": "Recipient first name.",
+      "required": true,
+      "example": "Sam"
+    },
+    {
+      "name": "plan_name",
+      "type": "string",
+      "description": "New plan name.",
+      "required": true,
+      "example": "Enterprise"
+    },
+    {
+      "name": "effective_date",
+      "type": "string",
+      "description": "Upgrade effective date.",
+      "required": true,
+      "example": "June 26, 2026"
+    },
+    {
+      "name": "seat_count",
+      "type": "string",
+      "description": "Included seat count.",
+      "required": true,
+      "example": "25"
+    },
+    {
+      "name": "next_invoice_date",
+      "type": "string",
+      "description": "Next invoice date.",
+      "required": true,
+      "example": "July 26, 2026"
+    },
+    {
+      "name": "features_url",
+      "type": "url",
+      "description": "Absolute URL to upgraded features.",
+      "required": true,
+      "example": "https://app.example.com/features"
+    }
+  ],
+  "sampleVariables": {
+    "product_name": "TemplateForge",
+    "first_name": "Sam",
+    "plan_name": "Enterprise",
+    "effective_date": "June 26, 2026",
+    "seat_count": "25",
+    "next_invoice_date": "July 26, 2026",
+    "features_url": "https://app.example.com/features"
+  },
+  "qualityScore": {
+    "visual_quality": 9,
+    "copy_clarity": 9,
+    "mobile_readiness": 9,
+    "marketplace_usefulness": 9,
+    "implementation_safety": 10,
+    "originality": 9
+  },
+  "text": "Hi {{first_name}},\n\nyour {{product_name}} workspace has been upgraded to {{plan_name}}. The new limits and features are available now.\n\nNew plan: {{plan_name}}\nEffective date: {{effective_date}}\nIncluded seats: {{seat_count}}\nNext invoice: {{next_invoice_date}}\n\nExplore new features: {{features_url}}\n\nYour billing page has the full invoice adjustment and plan history.",
+  "mjml": "<mjml>\n  <mj-head>\n    <mj-title>Plan Upgrade Confirmation</mj-title>\n    <mj-preview>A premium upgrade confirmation with plan clarity and immediate next steps.</mj-preview>\n    <mj-attributes>\n      <mj-all font-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif\" />\n      <mj-text color=\"#12161f\" font-size=\"16px\" line-height=\"24px\" />\n      <mj-section padding=\"0\" />\n      <mj-button border-radius=\"999px\" font-size=\"15px\" font-weight=\"800\" inner-padding=\"15px 24px\" />\n    </mj-attributes>\n  </mj-head>\n  <mj-body background-color=\"#f7fbf2\" width=\"600px\">\n    <mj-section padding=\"28px 22px 14px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#596272\" font-size=\"12px\" font-weight=\"800\" letter-spacing=\"1.8px\" text-transform=\"uppercase\">{{product_name}}</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#111827\" border-radius=\"22px 22px 0 0\" padding=\"34px 34px 28px\">\n      <mj-column>\n        <mj-text color=\"#34d399\" font-size=\"11px\" font-weight=\"900\" letter-spacing=\"2px\" text-transform=\"uppercase\" padding=\"0 0 14px\">Upgrade complete</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"30px\" font-weight=\"850\" line-height=\"36px\" padding=\"0 0 12px\">{{plan_name}} is now active</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"15px\" line-height=\"24px\" padding=\"0\" opacity=\"0.84\">Hi {{first_name}}, your {{product_name}} workspace has been upgraded to {{plan_name}}. The new limits and features are available now.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#ffffff\" border-radius=\"0 0 22px 22px\" padding=\"0 30px 30px\">\n      <mj-column>\n        <mj-spacer height=\"26px\" />\n        <mj-text background-color=\"#dcfce7\" color=\"#12161f\" border-radius=\"18px\" font-size=\"13px\" font-weight=\"800\" line-height=\"20px\" padding=\"18px 20px 4px\">New plan</mj-text>\n        <mj-text background-color=\"#dcfce7\" color=\"#12161f\" border-radius=\"18px\" font-size=\"28px\" font-weight=\"900\" line-height=\"34px\" padding=\"0 20px 18px\">{{plan_name}}</mj-text>\n        <mj-table padding=\"22px 0 4px\">\n          <tr><td style=\"padding:12px 0;border-bottom:1px solid #d6eadc;color:#596272;font-size:13px;\">Effective date</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #d6eadc;color:#12161f;font-size:13px;font-weight:700;\">{{effective_date}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #d6eadc;color:#596272;font-size:13px;\">Included seats</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #d6eadc;color:#12161f;font-size:13px;font-weight:700;\">{{seat_count}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #d6eadc;color:#596272;font-size:13px;\">Next invoice</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #d6eadc;color:#12161f;font-size:13px;font-weight:700;\">{{next_invoice_date}}</td></tr>\n        </mj-table>\n        <mj-button href=\"{{features_url}}\" background-color=\"#34d399\" color=\"#07130d\" padding=\"26px 0 8px\">Explore new features</mj-button>\n        <mj-text align=\"center\" color=\"#596272\" font-size=\"13px\" line-height=\"20px\" padding=\"18px 10px 0\">Your billing page has the full invoice adjustment and plan history.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section padding=\"22px 20px 40px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#596272\" font-size=\"12px\" line-height=\"18px\">TemplateForge marketplace template. Update branding and URLs before production use.</mj-text>\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>",
+  "author": "TemplateForge",
+  "license": "MIT",
+  "warnings": []
+}

@@ -1,0 +1,97 @@
+{
+  "id": "comment-mention",
+  "slug": "comment-mention",
+  "name": "Comment Mention",
+  "version": "1.0.0",
+  "category": "notifications",
+  "useCase": "Notify users when they are mentioned in a comment or collaborative thread.",
+  "description": "A clean collaboration email with context, quote, and one reply action.",
+  "subject": "{{actor_name}} mentioned you in {{object_name}}",
+  "tags": [
+    "transactional",
+    "notifications",
+    "mention",
+    "collaboration"
+  ],
+  "variables": [
+    {
+      "name": "product_name",
+      "type": "string",
+      "description": "Product or brand name displayed in the email header.",
+      "required": true,
+      "example": "TemplateForge"
+    },
+    {
+      "name": "first_name",
+      "type": "string",
+      "description": "Recipient first name.",
+      "required": true,
+      "example": "Luca"
+    },
+    {
+      "name": "actor_name",
+      "type": "string",
+      "description": "Name of the person who mentioned the recipient.",
+      "required": true,
+      "example": "Mina Park"
+    },
+    {
+      "name": "object_name",
+      "type": "string",
+      "description": "Object where the mention happened.",
+      "required": true,
+      "example": "Launch plan"
+    },
+    {
+      "name": "comment_excerpt",
+      "type": "string",
+      "description": "Short comment excerpt.",
+      "required": true,
+      "example": "Can you confirm the final send window?"
+    },
+    {
+      "name": "project_name",
+      "type": "string",
+      "description": "Project name.",
+      "required": true,
+      "example": "Q3 Launch"
+    },
+    {
+      "name": "thread_name",
+      "type": "string",
+      "description": "Thread name.",
+      "required": true,
+      "example": "Email rollout"
+    },
+    {
+      "name": "thread_url",
+      "type": "url",
+      "description": "Absolute URL to the comment thread.",
+      "required": true,
+      "example": "https://app.example.com/projects/q3/thread"
+    }
+  ],
+  "sampleVariables": {
+    "product_name": "TemplateForge",
+    "first_name": "Luca",
+    "actor_name": "Mina Park",
+    "object_name": "Launch plan",
+    "comment_excerpt": "Can you confirm the final send window?",
+    "project_name": "Q3 Launch",
+    "thread_name": "Email rollout",
+    "thread_url": "https://app.example.com/projects/q3/thread"
+  },
+  "qualityScore": {
+    "visual_quality": 9,
+    "copy_clarity": 9,
+    "mobile_readiness": 9,
+    "marketplace_usefulness": 9,
+    "implementation_safety": 10,
+    "originality": 9
+  },
+  "text": "Hi {{first_name}},\n\n{{actor_name}} mentioned you in {{object_name}}. Open the thread to reply with the full context.\n\nComment: {{comment_excerpt}}\nProject: {{project_name}}\nThread: {{thread_name}}\nMentioned by: {{actor_name}}\n\nOpen thread: {{thread_url}}\n\nYou are receiving this because mentions are enabled for your account.",
+  "mjml": "<mjml>\n  <mj-head>\n    <mj-title>Comment Mention</mj-title>\n    <mj-preview>A clean collaboration email with context, quote, and one reply action.</mj-preview>\n    <mj-attributes>\n      <mj-all font-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif\" />\n      <mj-text color=\"#111827\" font-size=\"16px\" line-height=\"24px\" />\n      <mj-section padding=\"0\" />\n      <mj-button border-radius=\"999px\" font-size=\"15px\" font-weight=\"800\" inner-padding=\"15px 24px\" />\n    </mj-attributes>\n  </mj-head>\n  <mj-body background-color=\"#f6f8ff\" width=\"600px\">\n    <mj-section padding=\"28px 22px 14px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"12px\" font-weight=\"800\" letter-spacing=\"1.8px\" text-transform=\"uppercase\">{{product_name}}</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#0b1220\" border-radius=\"22px 22px 0 0\" padding=\"34px 34px 28px\">\n      <mj-column>\n        <mj-text color=\"#4285f4\" font-size=\"11px\" font-weight=\"900\" letter-spacing=\"2px\" text-transform=\"uppercase\" padding=\"0 0 14px\">Mention</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"30px\" font-weight=\"850\" line-height=\"36px\" padding=\"0 0 12px\">{{actor_name}} needs your input</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"15px\" line-height=\"24px\" padding=\"0\" opacity=\"0.84\">Hi {{first_name}}, {{actor_name}} mentioned you in {{object_name}}. Open the thread to reply with the full context.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#ffffff\" border-radius=\"0 0 22px 22px\" padding=\"0 30px 30px\">\n      <mj-column>\n        <mj-spacer height=\"26px\" />\n        <mj-text background-color=\"#eaf2ff\" color=\"#111827\" border-radius=\"18px\" font-size=\"13px\" font-weight=\"800\" line-height=\"20px\" padding=\"18px 20px 4px\">Comment</mj-text>\n        <mj-text background-color=\"#eaf2ff\" color=\"#111827\" border-radius=\"18px\" font-size=\"28px\" font-weight=\"900\" line-height=\"34px\" padding=\"0 20px 18px\">{{comment_excerpt}}</mj-text>\n        <mj-table padding=\"22px 0 4px\">\n          <tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Project</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{project_name}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Thread</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{thread_name}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Mentioned by</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{actor_name}}</td></tr>\n        </mj-table>\n        <mj-button href=\"{{thread_url}}\" background-color=\"#4285f4\" color=\"#ffffff\" padding=\"26px 0 8px\">Open thread</mj-button>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"13px\" line-height=\"20px\" padding=\"18px 10px 0\">You are receiving this because mentions are enabled for your account.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section padding=\"22px 20px 40px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"12px\" line-height=\"18px\">TemplateForge marketplace template. Update branding and URLs before production use.</mj-text>\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>",
+  "author": "TemplateForge",
+  "license": "MIT",
+  "warnings": []
+}

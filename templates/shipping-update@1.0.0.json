@@ -1,0 +1,97 @@
+{
+  "id": "shipping-update",
+  "slug": "shipping-update",
+  "name": "Shipping Update",
+  "version": "1.0.0",
+  "category": "commerce",
+  "useCase": "Notify customers when a shipment has been handed to a carrier.",
+  "description": "A refined shipping email with carrier metadata and tracking as the primary action.",
+  "subject": "Order {{order_number}} is on the way",
+  "tags": [
+    "transactional",
+    "commerce",
+    "shipping",
+    "tracking"
+  ],
+  "variables": [
+    {
+      "name": "product_name",
+      "type": "string",
+      "description": "Product or brand name displayed in the email header.",
+      "required": true,
+      "example": "TemplateForge"
+    },
+    {
+      "name": "first_name",
+      "type": "string",
+      "description": "Recipient first name.",
+      "required": true,
+      "example": "Amina"
+    },
+    {
+      "name": "order_number",
+      "type": "string",
+      "description": "Order number.",
+      "required": true,
+      "example": "TF-10429"
+    },
+    {
+      "name": "carrier_name",
+      "type": "string",
+      "description": "Shipping carrier name.",
+      "required": true,
+      "example": "DHL Express"
+    },
+    {
+      "name": "tracking_number",
+      "type": "string",
+      "description": "Shipment tracking number.",
+      "required": true,
+      "example": "JD014600008234567890"
+    },
+    {
+      "name": "delivery_date",
+      "type": "string",
+      "description": "Estimated delivery date.",
+      "required": true,
+      "example": "July 2, 2026"
+    },
+    {
+      "name": "shipping_city",
+      "type": "string",
+      "description": "Destination city.",
+      "required": true,
+      "example": "Chicago"
+    },
+    {
+      "name": "tracking_url",
+      "type": "url",
+      "description": "Absolute URL to tracking page.",
+      "required": true,
+      "example": "https://shop.example.com/track/JD014600008234567890"
+    }
+  ],
+  "sampleVariables": {
+    "product_name": "TemplateForge",
+    "first_name": "Amina",
+    "order_number": "TF-10429",
+    "carrier_name": "DHL Express",
+    "tracking_number": "JD014600008234567890",
+    "delivery_date": "July 2, 2026",
+    "shipping_city": "Chicago",
+    "tracking_url": "https://shop.example.com/track/JD014600008234567890"
+  },
+  "qualityScore": {
+    "visual_quality": 9,
+    "copy_clarity": 9,
+    "mobile_readiness": 9,
+    "marketplace_usefulness": 9,
+    "implementation_safety": 10,
+    "originality": 9
+  },
+  "text": "Hi {{first_name}},\n\norder {{order_number}} has shipped with {{carrier_name}}. Tracking may take a few hours to show movement.\n\nEstimated arrival: {{delivery_date}}\nCarrier: {{carrier_name}}\nTracking: {{tracking_number}}\nShip to: {{shipping_city}}\n\nTrack package: {{tracking_url}}\n\nCarrier delivery windows can shift slightly once the package reaches the local facility.",
+  "mjml": "<mjml>\n  <mj-head>\n    <mj-title>Shipping Update</mj-title>\n    <mj-preview>A refined shipping email with carrier metadata and tracking as the primary action.</mj-preview>\n    <mj-attributes>\n      <mj-all font-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif\" />\n      <mj-text color=\"#111827\" font-size=\"16px\" line-height=\"24px\" />\n      <mj-section padding=\"0\" />\n      <mj-button border-radius=\"999px\" font-size=\"15px\" font-weight=\"800\" inner-padding=\"15px 24px\" />\n    </mj-attributes>\n  </mj-head>\n  <mj-body background-color=\"#f6f8ff\" width=\"600px\">\n    <mj-section padding=\"28px 22px 14px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"12px\" font-weight=\"800\" letter-spacing=\"1.8px\" text-transform=\"uppercase\">{{product_name}}</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#0b1220\" border-radius=\"22px 22px 0 0\" padding=\"34px 34px 28px\">\n      <mj-column>\n        <mj-text color=\"#4285f4\" font-size=\"11px\" font-weight=\"900\" letter-spacing=\"2px\" text-transform=\"uppercase\" padding=\"0 0 14px\">In transit</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"30px\" font-weight=\"850\" line-height=\"36px\" padding=\"0 0 12px\">Your package is moving</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"15px\" line-height=\"24px\" padding=\"0\" opacity=\"0.84\">Hi {{first_name}}, order {{order_number}} has shipped with {{carrier_name}}. Tracking may take a few hours to show movement.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#ffffff\" border-radius=\"0 0 22px 22px\" padding=\"0 30px 30px\">\n      <mj-column>\n        <mj-spacer height=\"26px\" />\n        <mj-text background-color=\"#eaf2ff\" color=\"#111827\" border-radius=\"18px\" font-size=\"13px\" font-weight=\"800\" line-height=\"20px\" padding=\"18px 20px 4px\">Estimated arrival</mj-text>\n        <mj-text background-color=\"#eaf2ff\" color=\"#111827\" border-radius=\"18px\" font-size=\"28px\" font-weight=\"900\" line-height=\"34px\" padding=\"0 20px 18px\">{{delivery_date}}</mj-text>\n        <mj-table padding=\"22px 0 4px\">\n          <tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Carrier</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{carrier_name}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Tracking</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{tracking_number}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#5b6475;font-size:13px;\">Ship to</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #dbe5f6;color:#111827;font-size:13px;font-weight:700;\">{{shipping_city}}</td></tr>\n        </mj-table>\n        <mj-button href=\"{{tracking_url}}\" background-color=\"#4285f4\" color=\"#ffffff\" padding=\"26px 0 8px\">Track package</mj-button>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"13px\" line-height=\"20px\" padding=\"18px 10px 0\">Carrier delivery windows can shift slightly once the package reaches the local facility.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section padding=\"22px 20px 40px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#5b6475\" font-size=\"12px\" line-height=\"18px\">TemplateForge marketplace template. Update branding and URLs before production use.</mj-text>\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>",
+  "author": "TemplateForge",
+  "license": "MIT",
+  "warnings": []
+}

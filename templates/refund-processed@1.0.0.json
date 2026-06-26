@@ -1,0 +1,89 @@
+{
+  "id": "refund-processed",
+  "slug": "refund-processed",
+  "name": "Refund Processed",
+  "version": "1.0.0",
+  "category": "billing",
+  "useCase": "Confirm a refund with clear timing expectations and support access.",
+  "description": "A calm refund confirmation email with premium customer-care positioning.",
+  "subject": "Your refund for {{amount_refunded}} has been processed",
+  "tags": [
+    "transactional",
+    "billing",
+    "refund",
+    "customer-care"
+  ],
+  "variables": [
+    {
+      "name": "product_name",
+      "type": "string",
+      "description": "Product name.",
+      "required": true,
+      "example": "TemplateForge"
+    },
+    {
+      "name": "first_name",
+      "type": "string",
+      "description": "Recipient first name.",
+      "required": true,
+      "example": "Morgan"
+    },
+    {
+      "name": "amount_refunded",
+      "type": "string",
+      "description": "Refund amount.",
+      "required": true,
+      "example": "$48.00"
+    },
+    {
+      "name": "refund_id",
+      "type": "string",
+      "description": "Refund reference ID.",
+      "required": true,
+      "example": "RF-8821"
+    },
+    {
+      "name": "original_payment_date",
+      "type": "string",
+      "description": "Original payment date.",
+      "required": true,
+      "example": "June 18, 2026"
+    },
+    {
+      "name": "refund_timing",
+      "type": "string",
+      "description": "Expected bank processing timing.",
+      "required": true,
+      "example": "5 to 10 business days"
+    },
+    {
+      "name": "billing_history_url",
+      "type": "url",
+      "description": "Absolute URL to billing history.",
+      "required": true,
+      "example": "https://app.example.com/billing/history"
+    }
+  ],
+  "sampleVariables": {
+    "product_name": "TemplateForge",
+    "first_name": "Morgan",
+    "amount_refunded": "$48.00",
+    "refund_id": "RF-8821",
+    "original_payment_date": "June 18, 2026",
+    "refund_timing": "5 to 10 business days",
+    "billing_history_url": "https://app.example.com/billing/history"
+  },
+  "qualityScore": {
+    "visual_quality": 9,
+    "copy_clarity": 9,
+    "mobile_readiness": 9,
+    "marketplace_usefulness": 9,
+    "implementation_safety": 10,
+    "originality": 9
+  },
+  "text": "Hi {{first_name}},\n\nwe processed your refund for {{product_name}}. Most banks post the credit within {{refund_timing}}.\n\nRefund amount: {{amount_refunded}}\nRefund ID: {{refund_id}}\nOriginal payment: {{original_payment_date}}\nExpected timing: {{refund_timing}}\n\nView billing history: {{billing_history_url}}\n\nIf the credit does not appear after the expected timing, your bank can trace it using the refund ID.",
+  "mjml": "<mjml>\n  <mj-head>\n    <mj-title>Refund Processed</mj-title>\n    <mj-preview>A calm refund confirmation email with premium customer-care positioning.</mj-preview>\n    <mj-attributes>\n      <mj-all font-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif\" />\n      <mj-text color=\"#181229\" font-size=\"16px\" line-height=\"24px\" />\n      <mj-section padding=\"0\" />\n      <mj-button border-radius=\"999px\" font-size=\"15px\" font-weight=\"800\" inner-padding=\"15px 24px\" />\n    </mj-attributes>\n  </mj-head>\n  <mj-body background-color=\"#f5f3ff\" width=\"600px\">\n    <mj-section padding=\"28px 22px 14px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#625a72\" font-size=\"12px\" font-weight=\"800\" letter-spacing=\"1.8px\" text-transform=\"uppercase\">{{product_name}}</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#1e123b\" border-radius=\"22px 22px 0 0\" padding=\"34px 34px 28px\">\n      <mj-column>\n        <mj-text color=\"#8b5cf6\" font-size=\"11px\" font-weight=\"900\" letter-spacing=\"2px\" text-transform=\"uppercase\" padding=\"0 0 14px\">Refund processed</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"30px\" font-weight=\"850\" line-height=\"36px\" padding=\"0 0 12px\">{{amount_refunded}} is on its way back</mj-text>\n        <mj-text color=\"#ffffff\" font-size=\"15px\" line-height=\"24px\" padding=\"0\" opacity=\"0.84\">Hi {{first_name}}, we processed your refund for {{product_name}}. Most banks post the credit within {{refund_timing}}.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#ffffff\" border-radius=\"0 0 22px 22px\" padding=\"0 30px 30px\">\n      <mj-column>\n        <mj-spacer height=\"26px\" />\n        <mj-text background-color=\"#ede9fe\" color=\"#181229\" border-radius=\"18px\" font-size=\"13px\" font-weight=\"800\" line-height=\"20px\" padding=\"18px 20px 4px\">Refund amount</mj-text>\n        <mj-text background-color=\"#ede9fe\" color=\"#181229\" border-radius=\"18px\" font-size=\"28px\" font-weight=\"900\" line-height=\"34px\" padding=\"0 20px 18px\">{{amount_refunded}}</mj-text>\n        <mj-table padding=\"22px 0 4px\">\n          <tr><td style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#625a72;font-size:13px;\">Refund ID</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#181229;font-size:13px;font-weight:700;\">{{refund_id}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#625a72;font-size:13px;\">Original payment</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#181229;font-size:13px;font-weight:700;\">{{original_payment_date}}</td></tr><tr><td style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#625a72;font-size:13px;\">Expected timing</td><td align=\"right\" style=\"padding:12px 0;border-bottom:1px solid #ddd6fe;color:#181229;font-size:13px;font-weight:700;\">{{refund_timing}}</td></tr>\n        </mj-table>\n        <mj-button href=\"{{billing_history_url}}\" background-color=\"#8b5cf6\" color=\"#ffffff\" padding=\"26px 0 8px\">View billing history</mj-button>\n        <mj-text align=\"center\" color=\"#625a72\" font-size=\"13px\" line-height=\"20px\" padding=\"18px 10px 0\">If the credit does not appear after the expected timing, your bank can trace it using the refund ID.</mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section padding=\"22px 20px 40px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#625a72\" font-size=\"12px\" line-height=\"18px\">TemplateForge marketplace template. Update branding and URLs before production use.</mj-text>\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>",
+  "author": "TemplateForge",
+  "license": "MIT",
+  "warnings": []
+}

@@ -22,9 +22,13 @@ TEMPLATEFORGE_MARKETPLACE_MANIFEST_URL="https://cdn.jsdelivr.net/gh/obafemioloru
 manifest.json
 templates/
   welcome-account@1.0.0.json
+  payment-failed@1.0.0.json
+  ...
 ```
 
 `manifest.json` lists packages. Each template package is self-contained and includes MJML, text fallback, variables, and sample payload.
+
+The catalog includes premium transactional templates across onboarding, billing, authentication, commerce, and notifications.
 
 ## Template Package Rules
 
@@ -33,4 +37,3 @@ templates/
 - Include `mjml`, `text`, `variables`, and `sampleVariables`.
 - Keep sample payloads fake and generic. Do not include secrets, real user data, or customer-specific brand content.
 - Use kebab-case ids and slugs.
-
