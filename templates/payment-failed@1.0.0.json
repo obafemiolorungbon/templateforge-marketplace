@@ -6,6 +6,7 @@
   "category": "billing",
   "useCase": "Notify a customer that a payment failed and prompt them to update payment details.",
   "description": "A billing recovery email with one clear payment update action.",
+  "subject": "Payment failed for {{plan_name}}",
   "tags": [
     "transactional",
     "billing",
@@ -33,13 +34,13 @@
     },
     {
       "name": "update_payment_url",
-      "type": "url",
+      "type": "string",
       "description": "Payment update URL.",
       "required": true
     },
     {
       "name": "support_url",
-      "type": "url",
+      "type": "string",
       "description": "Help or support URL.",
       "required": true
     }

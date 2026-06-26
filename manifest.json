@@ -18,7 +18,8 @@
       "url": "templates/email-verification@1.0.0.json",
       "useCase": "Verify a new user email address with a polished account activation flow.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/email-verification@1.0.0.png"
     },
     {
       "id": "magic-login-link",
@@ -37,7 +38,8 @@
       "url": "templates/magic-login-link@1.0.0.json",
       "useCase": "Send a passwordless login link with strong security context.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/magic-login-link@1.0.0.png"
     },
     {
       "id": "new-device-login",
@@ -56,7 +58,8 @@
       "url": "templates/new-device-login@1.0.0.json",
       "useCase": "Alert users when their account is accessed from a new device.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/new-device-login@1.0.0.png"
     },
     {
       "id": "password-reset-request",
@@ -75,7 +78,8 @@
       "url": "templates/password-reset-request@1.0.0.json",
       "useCase": "Help users reset a password with clear account safety messaging.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/password-reset-request@1.0.0.png"
     },
     {
       "id": "two-factor-code",
@@ -94,7 +98,8 @@
       "url": "templates/two-factor-code@1.0.0.json",
       "useCase": "Send a short-lived 2FA or OTP code in a clear, high-contrast format.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/two-factor-code@1.0.0.png"
     },
     {
       "id": "invoice-ready",
@@ -113,7 +118,8 @@
       "url": "templates/invoice-ready@1.0.0.json",
       "useCase": "Send customers a premium invoice notice with direct access to billing details.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/invoice-ready@1.0.0.png"
     },
     {
       "id": "payment-failed",
@@ -149,7 +155,8 @@
       "url": "templates/payment-method-expiring@1.0.0.json",
       "useCase": "Prompt customers to update an expiring payment method before renewal fails.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/payment-method-expiring@1.0.0.png"
     },
     {
       "id": "plan-upgrade-confirmation",
@@ -168,7 +175,8 @@
       "url": "templates/plan-upgrade-confirmation@1.0.0.json",
       "useCase": "Confirm a successful plan upgrade and point customers to newly available capabilities.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/plan-upgrade-confirmation@1.0.0.png"
     },
     {
       "id": "refund-processed",
@@ -187,7 +195,8 @@
       "url": "templates/refund-processed@1.0.0.json",
       "useCase": "Confirm a refund with clear timing expectations and support access.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/refund-processed@1.0.0.png"
     },
     {
       "id": "subscription-renewal-reminder",
@@ -206,7 +215,8 @@
       "url": "templates/subscription-renewal-reminder@1.0.0.json",
       "useCase": "Remind subscribers about an upcoming renewal with transparent billing details.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/subscription-renewal-reminder@1.0.0.png"
     },
     {
       "id": "abandoned-checkout",
@@ -225,7 +235,8 @@
       "url": "templates/abandoned-checkout@1.0.0.json",
       "useCase": "Recover a checkout with restrained urgency and a premium product reminder.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/abandoned-checkout@1.0.0.png"
     },
     {
       "id": "delivery-confirmation",
@@ -244,7 +255,8 @@
       "url": "templates/delivery-confirmation@1.0.0.json",
       "useCase": "Confirm delivery and direct customers to support or order details if needed.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/delivery-confirmation@1.0.0.png"
     },
     {
       "id": "order-confirmation",
@@ -263,7 +275,8 @@
       "url": "templates/order-confirmation@1.0.0.json",
       "useCase": "Confirm a purchase with strong order summary hierarchy and a clear receipt link.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/order-confirmation@1.0.0.png"
     },
     {
       "id": "return-approved",
@@ -282,7 +295,8 @@
       "url": "templates/return-approved@1.0.0.json",
       "useCase": "Approve a return request with next steps, deadline, and label access.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/return-approved@1.0.0.png"
     },
     {
       "id": "shipping-update",
@@ -301,7 +315,8 @@
       "url": "templates/shipping-update@1.0.0.json",
       "useCase": "Notify customers when a shipment has been handed to a carrier.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/shipping-update@1.0.0.png"
     },
     {
       "id": "approval-request",
@@ -320,7 +335,8 @@
       "url": "templates/approval-request@1.0.0.json",
       "useCase": "Send approval requests with due dates, requester context, and a direct review action.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/approval-request@1.0.0.png"
     },
     {
       "id": "comment-mention",
@@ -339,7 +355,8 @@
       "url": "templates/comment-mention@1.0.0.json",
       "useCase": "Notify users when they are mentioned in a comment or collaborative thread.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/comment-mention@1.0.0.png"
     },
     {
       "id": "incident-resolved",
@@ -358,7 +375,8 @@
       "url": "templates/incident-resolved@1.0.0.json",
       "useCase": "Send customers a concise incident resolution notice with status and postmortem access.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/incident-resolved@1.0.0.png"
     },
     {
       "id": "integration-disconnected",
@@ -377,7 +395,8 @@
       "url": "templates/integration-disconnected@1.0.0.json",
       "useCase": "Alert workspace owners when an integration needs reconnection.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/integration-disconnected@1.0.0.png"
     },
     {
       "id": "report-ready",
@@ -396,7 +415,8 @@
       "url": "templates/report-ready@1.0.0.json",
       "useCase": "Notify customers when a generated report, export, or analysis is ready.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/report-ready@1.0.0.png"
     },
     {
       "id": "onboarding-checklist",
@@ -415,7 +435,8 @@
       "url": "templates/onboarding-checklist@1.0.0.json",
       "useCase": "Bring users back to finish setup after they complete part of onboarding.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/onboarding-checklist@1.0.0.png"
     },
     {
       "id": "product-tour-followup",
@@ -434,7 +455,8 @@
       "url": "templates/product-tour-followup@1.0.0.json",
       "useCase": "Follow up after a product tour with one contextual next action.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/product-tour-followup@1.0.0.png"
     },
     {
       "id": "team-member-added",
@@ -453,7 +475,8 @@
       "url": "templates/team-member-added@1.0.0.json",
       "useCase": "Notify admins when a new team member joins their workspace.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/team-member-added@1.0.0.png"
     },
     {
       "id": "trial-started",
@@ -472,7 +495,8 @@
       "url": "templates/trial-started@1.0.0.json",
       "useCase": "Confirm trial activation and move the customer into the first successful product action.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/trial-started@1.0.0.png"
     },
     {
       "id": "welcome-account",
@@ -489,7 +513,8 @@
       "path": "templates/welcome-account@1.0.0.json",
       "url": "templates/welcome-account@1.0.0.json",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/welcome-account@1.0.0.png"
     },
     {
       "id": "workspace-invite",
@@ -508,7 +533,8 @@
       "url": "templates/workspace-invite@1.0.0.json",
       "useCase": "Invite a teammate into a workspace with a polished, high-trust acceptance flow.",
       "author": "TemplateForge",
-      "license": "MIT"
+      "license": "MIT",
+      "preview": "previews/workspace-invite@1.0.0.png"
     }
   ]
 }

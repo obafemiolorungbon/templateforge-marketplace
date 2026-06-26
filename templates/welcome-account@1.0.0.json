@@ -36,8 +36,13 @@
     "product_name": "TemplateForge",
     "dashboard_url": "https://app.example.com/dashboard"
   },
-  "tags": ["onboarding", "account", "welcome"],
+  "tags": [
+    "onboarding",
+    "account",
+    "welcome"
+  ],
   "author": "TemplateForge",
   "license": "MIT",
-  "warnings": []
+  "warnings": [],
+  "preview": "previews/welcome-account@1.0.0.png"
 }
