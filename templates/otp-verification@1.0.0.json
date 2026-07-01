@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "otp-verification",
+  "slug": "otp-verification",
+  "name": "OTP Verification",
+  "version": "1.0.0",
+  "category": "authentication",
+  "subject": "Your verification code",
+  "useCase": "Send a one-time password code for account verification or login confirmation.",
+  "description": "A concise OTP email with a dominant code block, expiry note, and security warning.",
+  "tags": [
+    "transactional",
+    "authentication",
+    "security",
+    "otp"
+  ],
+  "preview": "previews/otp-verification@1.0.0.png",
+  "author": "TemplateForge",
+  "license": "MIT",
+  "variables": [
+    {
+      "name": "first_name",
+      "type": "string",
+      "description": "Recipient first name.",
+      "required": true
+    },
+    {
+      "name": "otp_code",
+      "type": "string",
+      "description": "One-time password code.",
+      "required": true
+    },
+    {
+      "name": "expiry_minutes",
+      "type": "number",
+      "description": "Minutes before the code expires.",
+      "required": true
+    },
+    {
+      "name": "support_url",
+      "type": "string",
+      "format": "url",
+      "description": "Help or support URL.",
+      "required": true
+    }
+  ],
+  "sampleVariables": {
+    "first_name": "Alex",
+    "otp_code": "482913",
+    "expiry_minutes": 10,
+    "support_url": "https://example.com/support"
+  },
+  "warnings": [],
+  "text": "Hi {{first_name}},\n\nUse this one-time password to continue:\n{{otp_code}}\n\nThis code expires in {{expiry_minutes}} minutes.\n\nIf you did not request this code, you can ignore this message or visit {{support_url}}.",
+  "mjml": "<mjml>\n  <mj-head>\n    <mj-title>Your verification code</mj-title>\n    <mj-preview>Your one-time password expires in {{expiry_minutes}} minutes.</mj-preview>\n    <mj-attributes>\n      <mj-all font-family=\"-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif\" />\n      <mj-text color=\"#172033\" font-size=\"16px\" line-height=\"24px\" />\n      <mj-section padding=\"0\" />\n    </mj-attributes>\n  </mj-head>\n  <mj-body background-color=\"#f4f7fb\" width=\"600px\">\n    <mj-section padding=\"32px 20px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#647084\" font-size=\"13px\" font-weight=\"700\" letter-spacing=\"1.4px\" text-transform=\"uppercase\">\n          TemplateForge\n        </mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section background-color=\"#ffffff\" border-radius=\"16px\" padding=\"0 0 8px 0\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#111827\" font-size=\"28px\" font-weight=\"700\" line-height=\"34px\" padding=\"40px 32px 8px\">\n          Your verification code\n        </mj-text>\n        <mj-text align=\"center\" color=\"#4b5870\" padding=\"0 36px 28px\">\n          Hi {{first_name}}, use this code to finish signing in or confirming your account action.\n        </mj-text>\n        <mj-text align=\"center\" background-color=\"#eef4ff\" color=\"#0f3f8f\" font-size=\"36px\" font-weight=\"800\" letter-spacing=\"8px\" line-height=\"44px\" padding=\"24px 20px\">\n          {{otp_code}}\n        </mj-text>\n        <mj-text align=\"center\" color=\"#334155\" font-size=\"15px\" font-weight=\"600\" padding=\"28px 32px 4px\">\n          This code expires in {{expiry_minutes}} minutes.\n        </mj-text>\n        <mj-text align=\"center\" color=\"#667085\" font-size=\"14px\" line-height=\"22px\" padding=\"0 36px 32px\">\n          If you did not request this code, you can ignore this email or get help at {{support_url}}.\n        </mj-text>\n      </mj-column>\n    </mj-section>\n    <mj-section padding=\"24px 20px 40px\">\n      <mj-column>\n        <mj-text align=\"center\" color=\"#8a94a6\" font-size=\"12px\" line-height=\"18px\">\n          This is a transactional security message.\n        </mj-text>\n      </mj-column>\n    </mj-section>\n  </mj-body>\n</mjml>"
+}

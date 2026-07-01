@@ -56,6 +56,24 @@
       "license": "MIT"
     },
     {
+      "id": "otp-verification",
+      "name": "OTP Verification",
+      "version": "1.0.0",
+      "category": "authentication",
+      "useCase": "Send a one-time password code for account verification or login confirmation.",
+      "description": "A concise OTP email with a dominant code block, expiry note, and security warning.",
+      "tags": [
+        "transactional",
+        "authentication",
+        "security",
+        "otp"
+      ],
+      "url": "templates/otp-verification@1.0.0.json",
+      "preview": "previews/otp-verification@1.0.0.png",
+      "author": "TemplateForge",
+      "license": "MIT"
+    },
+    {
       "id": "password-reset-request",
       "name": "Password Reset Request",
       "version": "1.0.0",
