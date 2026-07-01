@@ -1,0 +1,62 @@
+name: Render Template Previews
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "templates/**/*.json"
+      - "manifest.json"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  render:
+    if: startsWith(github.event.pull_request.head.ref, 'agent/template/')
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.10.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
+
+      - name: Render changed previews
+        run: |
+          git fetch origin ${{ github.event.pull_request.base.ref }} --depth=1
+          CHANGED_TEMPLATES="$(git diff --name-only origin/${{ github.event.pull_request.base.ref }}...HEAD -- 'templates/*.json' | tr '\n' ' ')"
+          if [ -z "$CHANGED_TEMPLATES" ]; then
+            echo "No changed template JSON files detected; rendering all previews."
+            pnpm render:previews
+          else
+            echo "Rendering changed templates: $CHANGED_TEMPLATES"
+            pnpm render:previews $CHANGED_TEMPLATES
+          fi
+
+      - run: pnpm validate
+
+      - name: Commit rendered previews
+        run: |
+          git config user.name "TemplateForge Preview Bot"
+          git config user.email "templateforge-preview@users.noreply.github.com"
+          git add previews/*.png
+          if git diff --cached --quiet; then
+            echo "No preview changes to commit."
+          else
+            git commit -m "Render template previews"
+            git push origin HEAD:${{ github.event.pull_request.head.ref }}
+          fi
