@@ -1,5 +1,81 @@
 {
   "schemaVersion": "1.0",
+  "packs": [
+    {
+      "id": "saas-starter",
+      "name": "SaaS Starter",
+      "description": "Authentication, onboarding, trial, and billing templates for a product-led SaaS workspace.",
+      "category": "saas",
+      "tags": [
+        "saas",
+        "onboarding",
+        "billing",
+        "authentication"
+      ],
+      "templateIds": [
+        "welcome-account",
+        "email-verification",
+        "password-reset-request",
+        "magic-login-link",
+        "two-factor-code",
+        "trial-started",
+        "onboarding-checklist",
+        "workspace-invite",
+        "subscription-renewal-reminder",
+        "payment-failed",
+        "plan-upgrade-confirmation"
+      ]
+    },
+    {
+      "id": "ecommerce-starter",
+      "name": "Ecommerce Starter",
+      "description": "Account, order, fulfillment, refund, and recovery templates for commerce flows.",
+      "category": "commerce",
+      "tags": [
+        "ecommerce",
+        "commerce",
+        "orders",
+        "shipping"
+      ],
+      "templateIds": [
+        "welcome-account",
+        "email-verification",
+        "password-reset-request",
+        "magic-login-link",
+        "two-factor-code",
+        "order-confirmation",
+        "shipping-update",
+        "delivery-confirmation",
+        "refund-processed",
+        "return-approved",
+        "abandoned-checkout"
+      ]
+    },
+    {
+      "id": "fintech-starter",
+      "name": "Fintech Starter",
+      "description": "High-trust account, security, billing, and receipt templates for money movement products.",
+      "category": "fintech",
+      "tags": [
+        "fintech",
+        "billing",
+        "security",
+        "authentication"
+      ],
+      "templateIds": [
+        "welcome-account",
+        "email-verification",
+        "password-reset-request",
+        "magic-login-link",
+        "two-factor-code",
+        "new-device-login",
+        "invoice-ready",
+        "payment-failed",
+        "payment-method-expiring",
+        "refund-processed"
+      ]
+    }
+  ],
   "templates": [
     {
       "id": "email-verification",

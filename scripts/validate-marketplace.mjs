@@ -100,6 +100,7 @@ const warnings = [];
 const manifest = JSON.parse(await fs.readFile("manifest.json", "utf8"));
 if (typeof manifest.schemaVersion !== "string") errors.push("manifest schemaVersion is required.");
 if (!Array.isArray(manifest.templates)) errors.push("manifest templates must be an array.");
+if (manifest.packs !== undefined && !Array.isArray(manifest.packs)) errors.push("manifest packs must be an array.");
 
 const files = await listTemplateFiles();
 const seenIds = new Set();
@@ -124,6 +125,33 @@ for (const file of files) {
   }
   if (entry.url !== relative) errors.push(`manifest url for ${result.template.id} must be ${relative}.`);
   if (entry.preview !== result.template.preview) errors.push(`manifest preview for ${result.template.id} must be ${result.template.preview}.`);
+}
+
+const seenPackIds = new Set();
+for (const pack of manifest.packs ?? []) {
+  if (typeof pack.id !== "string" || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(pack.id)) {
+    errors.push(`${pack.id ?? "pack"} id must be kebab-case.`);
+  }
+  if (seenPackIds.has(pack.id)) errors.push(`Duplicate pack id: ${pack.id}.`);
+  seenPackIds.add(pack.id);
+
+  for (const key of ["name", "description", "category"]) {
+    if (typeof pack[key] !== "string" || pack[key].length === 0) {
+      errors.push(`${pack.id ?? "pack"} missing string ${key}.`);
+    }
+  }
+  if (!Array.isArray(pack.tags)) errors.push(`${pack.id} tags must be an array.`);
+  if (!Array.isArray(pack.templateIds) || pack.templateIds.length === 0) {
+    errors.push(`${pack.id} templateIds must be a non-empty array.`);
+    continue;
+  }
+
+  const seenPackTemplateIds = new Set();
+  for (const templateId of pack.templateIds) {
+    if (seenPackTemplateIds.has(templateId)) errors.push(`${pack.id} has duplicate template id ${templateId}.`);
+    seenPackTemplateIds.add(templateId);
+    if (!seenIds.has(templateId)) errors.push(`${pack.id} references missing template ${templateId}.`);
+  }
 }
 
 for (const warning of warnings) console.warn(`warning: ${warning}`);
